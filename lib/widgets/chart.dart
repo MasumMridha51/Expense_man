@@ -82,7 +82,9 @@ class BarChartSample1State extends State<BarChartSample8> {
       fontWeight: FontWeight.bold,
       fontSize: 14,
     );
-    List<String> days = [widget.expenseName.getTitle];
+
+    List<String> days = widget.expenseName.map((e) => e.title).toList();
+    // [widget.expenseName[0].title, widget.expenseName[1].title];
 
     Widget text = Text(
       days[value.toInt()],
@@ -97,8 +99,15 @@ class BarChartSample1State extends State<BarChartSample8> {
   }
 
   BarChartData randomData() {
+    List<double> amountList = widget.expenseName.map((e) => e.amount).toList();
+
+    double maxAmount = 0;
+    amountList.forEach((element) {
+      maxAmount = element > maxAmount ? element : maxAmount;
+    });
+
     return BarChartData(
-      maxY: 300.0,
+      maxY: maxAmount + 4,
       barTouchData: BarTouchData(
         enabled: false,
       ),
@@ -132,10 +141,10 @@ class BarChartSample1State extends State<BarChartSample8> {
         show: false,
       ),
       barGroups: List.generate(
-        7,
+        amountList.length,
         (i) => makeGroupData(
           i,
-          Random().nextInt(290).toDouble() + 10,
+          amountList[i],
         ),
       ),
       gridData: const FlGridData(show: false),

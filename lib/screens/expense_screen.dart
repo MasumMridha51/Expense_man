@@ -28,6 +28,27 @@ class _ExpenseScreenState extends State<ExpenseScreen> {
       date: DateTime.now(),
       category: ExpenseCategory.leisure,
     ),
+
+    Expense(
+      title: 'one',
+      amount: 20,
+      date: DateTime.now(),
+      category: ExpenseCategory.leisure,
+    ),
+
+    Expense(
+      title: 'two',
+      amount: 22,
+      date: DateTime.now(),
+      category: ExpenseCategory.leisure,
+    ),
+
+    Expense(
+      title: 'three',
+      amount: 18,
+      date: DateTime.now(),
+      category: ExpenseCategory.leisure,
+    ),
   ];
   // Get registered Expense Functions
   List<Expense> getRegisteredExpenses() {

@@ -14,19 +14,19 @@ void main() {
   runApp(
     MaterialApp(
       debugShowCheckedModeBanner: false,
-      darkTheme: ThemeData.dark().copyWith(
-        useMaterial3: true,
-        cardTheme: CardTheme().copyWith(
-          color: kDarkColorScheme.secondaryContainer,
-          margin: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-        ),
-        elevatedButtonTheme: ElevatedButtonThemeData(
-          style: ElevatedButton.styleFrom(
-            backgroundColor: kDarkColorScheme.primaryContainer,
-            foregroundColor: kDarkColorScheme.onPrimaryContainer,
-          ),
-        ),
-      ),
+      // darkTheme: ThemeData.dark().copyWith(
+      //   useMaterial3: true,
+      //   cardTheme: CardTheme().copyWith(
+      //     color: kDarkColorScheme.secondaryContainer,
+      //     margin: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+      //   ),
+      //   elevatedButtonTheme: ElevatedButtonThemeData(
+      //     style: ElevatedButton.styleFrom(
+      //       backgroundColor: kDarkColorScheme.primaryContainer,
+      //       foregroundColor: kDarkColorScheme.onPrimaryContainer,
+      //     ),
+      //   ),
+      // ),
       theme: ThemeData().copyWith(
         useMaterial3: true,
         colorScheme: kColorScheme,

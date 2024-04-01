@@ -33,7 +33,7 @@ class Expense {
     return formatter.format(date);
   }
 
-  String get getTitle {
-    return title;
-  }
+  // String get getTitle {
+  //   return title;
+  // }
 }
